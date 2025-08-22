@@ -8,6 +8,8 @@
     	<script src="aframe-v1.5.0.min.js"></script>
     	<script src="aframe-ar.js"></script>
 		<script src="gestures.js"></script>
+		<script src="animation-mixer.js"></script>
+		<script src="aframe-extras.js"></script>
 	</head>
 		
 	<body style="margin : 0px; overflow: hidden;">
@@ -18,13 +20,15 @@
       </a-assets>
 
       <a-entity raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-        <a-entity gltf-model="#motor" position="0 0 0" scale="0.05 0.05 0.05" class="clickable" gesture-handler>
+        <a-entity gltf-model="#motor" position="0 0 0" scale="0.05 0.05 0.05" class="clickable" gesture-handler
+		animation-mixer="clip: motor_anim;timeScale:0.1;">
         </a-entity>
       </a-entity>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
+
 
 
 
